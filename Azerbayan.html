@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <link rel="icon" href="/workspaces/agua-5/imagenes/Flag_of_Azerbaijan.svg.png" />
+    <!-- Ruta relativa correcta desde index.html -->
+    <link rel="icon" href="imagenes/Flag_of_Azerbaijan.svg.png" />
     <title>Cocina</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -9,12 +10,15 @@
   <body>
     <div id="contenido">
       <div class="contenedor-imagen">
-        <!-- esta imagen viene de nuestra carpeta de imgs. Se puede reemplazar por una externa u otra que carguemos en el repositorio -->
-        <img src="/workspaces/agua-5/imagenes/Flag_of_Azerbaijan.svg.png" />
+        <!-- Misma ruta relativa que para el icono -->
+        <img src="imagenes/Flag_of_Azerbaijan.svg.png" alt="Bandera de Azerbaiyán">
       </div>
-      <p class="texto">Cada video es un experiencia visual y sonora con <a href="inicio.html">asmr</a></p>
+      <p class="texto">Donde el paisaje y la comida se juntan <a href="inicio.html">Azerbaiyán.</a></p>
     </div>
-    <!-- esta etiquera podemos traer audios a nuestro sitio. en este caso, le damos la propiedad "autoplay" para que suene sin tener que activarlo-->
-    <audio autoplay src="sonidos\mar1.mp3"></audio>
+
+    <!-- Audio con ruta relativa y control de usuario (el autoplay no funcionará sin interacción) -->
+    <audio controls>
+      <source src="sonidos/mar1.mp3" type="audio/mpeg">
+    </audio>
   </body>
 </html>
